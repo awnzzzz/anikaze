@@ -40,9 +40,9 @@ function ContinueWatching({ session }) {
         const fetchData = async () => {
             if (typeof window !== 'undefined') {
                 if (session?.user?.name) {
-                    // const response = await fetch(`/api/watchhistory`, {
-                    //     method: "GET",
-                    // });
+                    const response = await fetch(`/api/watchhistory`, {
+                        method: "GET",
+                    });
                     const history = await getWatchHistory();
 
                     if (history?.length > 0) {
